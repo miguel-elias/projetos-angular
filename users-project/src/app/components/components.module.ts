@@ -1,18 +1,29 @@
 import { NgModule } from "@angular/core";
 import { AngularMaterialModule } from "../angular-material/angular-material.module";
 import { UserDetailsComponent } from './user-details/user-details.component';
+import { FilterComponent } from './filter/filter.component';
+import { FormsModule } from "@angular/forms";
+import { CommonModule } from "@angular/common";
+import { UsersListComponent } from './users-list/users-list.component';
+
 
 
 
 @NgModule({
   declarations: [
-    UserDetailsComponent
+    UserDetailsComponent,
+    FilterComponent,
+    UsersListComponent
   ],
   imports: [
-    AngularMaterialModule
+    AngularMaterialModule,
+    CommonModule,
+    FormsModule
   ],
   exports: [
     UserDetailsComponent,
+    FilterComponent,
+    UsersListComponent
 
   ]
 })
